@@ -10,13 +10,21 @@ expand -t$TM_TAB_SIZE
 </string>
 	<key>input</key>
 	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
-	<string>^@T</string>
+	<string>^@t</string>
 	<key>name</key>
 	<string>Convert Tabs to Spaces</string>
-	<key>output</key>
-	<string>replaceSelectedText</string>
+	<key>outputCaret</key>
+	<string>heuristic</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
 	<key>uuid</key>
 	<string>B9B9EEC2-26C1-4475-9642-3EA551999169</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
