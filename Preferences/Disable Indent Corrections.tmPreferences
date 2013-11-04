@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Spell Checking: Enable for Strings</string>
+	<string>Indent Corrections: Disable for Comments and Strings</string>
 	<key>scope</key>
-	<string>^ source string.quoted - punctuation</string>
+	<string>comment.block, string.quoted</string>
 	<key>settings</key>
 	<dict>
-		<key>spellChecking</key>
-		<integer>1</integer>
+		<key>disableIndentCorrections</key>
+		<true/>
 	</dict>
 	<key>uuid</key>
-	<string>CF9BE765-81D0-4644-9684-4F310C94A3AD</string>
+	<string>C4826668-9334-460A-800A-D3E2D9A8A404</string>
 </dict>
 </plist>
