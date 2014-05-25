@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
+	<string>#!/usr/bin/env ruby -wKU
 
 termchar = ENV['TM_LINE_TERMINATOR'] || ";"
 
@@ -19,15 +19,23 @@ print es($stdin.read()[/^(.*?);*\s*$/, 1]) + "#{es(termchar)}$0"</string>
 	<string>line</string>
 	<key>input</key>
 	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>~@</string>
 	<key>name</key>
 	<string>and Insert Terminator</string>
-	<key>output</key>
-	<string>insertAsSnippet</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>snippet</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
 	<key>scope</key>
 	<string>source</string>
 	<key>uuid</key>
 	<string>CA1849DD-D6EC-415D-8788-DD93BE027F6D</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>

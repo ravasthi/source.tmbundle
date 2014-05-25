@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
+	<string>#!/usr/bin/env ruby -wKU
 
 require ENV['TM_SUPPORT_PATH'] + '/lib/exit_codes'
 
@@ -52,15 +52,23 @@ end
 	<string>word</string>
 	<key>input</key>
 	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>^_</string>
 	<key>name</key>
 	<string>Toggle camelCase / snake_case / PascalCase</string>
-	<key>output</key>
-	<string>replaceSelectedText</string>
+	<key>outputCaret</key>
+	<string>heuristic</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
 	<key>scope</key>
 	<string>source</string>
 	<key>uuid</key>
 	<string>6065BB2D-242A-4C3D-B523-6F560D65AC11</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>

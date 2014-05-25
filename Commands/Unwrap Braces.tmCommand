@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -wKU
+	<string>#!/usr/bin/env ruby -wKU
 
 def tab
 	ENV['TM_SOFT_TABS'] == 'YES' ? ' ' * ENV['TM_TAB_SIZE'].to_i : "\t"
@@ -21,15 +21,23 @@ end
 </string>
 	<key>input</key>
 	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>}</string>
 	<key>name</key>
 	<string>Unwrap Braces</string>
-	<key>output</key>
-	<string>replaceSelectedText</string>
+	<key>outputCaret</key>
+	<string>heuristic</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
 	<key>scope</key>
 	<string>source &amp; dyn.selection &amp; -dyn.caret.mixed</string>
 	<key>uuid</key>
 	<string>DD42B10A-E753-4E08-A998-5C2E7C2D0CC2</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
