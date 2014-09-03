@@ -13,7 +13,7 @@ unexpand -t$TM_TAB_SIZE
 	<key>inputFormat</key>
 	<string>text</string>
 	<key>keyEquivalent</key>
-	<string>^@t</string>
+	<string>^~@s</string>
 	<key>name</key>
 	<string>Convert Spaces to Tabs</string>
 	<key>outputCaret</key>

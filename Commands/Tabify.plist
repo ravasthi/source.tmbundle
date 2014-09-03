@@ -54,7 +54,7 @@ end
 	<key>inputFormat</key>
 	<string>text</string>
 	<key>keyEquivalent</key>
-	<string>^@t</string>
+	<string>^~@s</string>
 	<key>name</key>
 	<string>Convert Spaces to Tabs (Estimating Indent)</string>
 	<key>outputCaret</key>
