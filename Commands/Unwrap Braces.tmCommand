@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/usr/bin/env ruby -wKU
+	<string>#!/usr/bin/env rvm-auto-ruby
 
 def tab
 	ENV['TM_SOFT_TABS'] == 'YES' ? ' ' * ENV['TM_TAB_SIZE'].to_i : "\t"

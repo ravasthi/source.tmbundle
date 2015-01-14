@@ -5,12 +5,12 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/usr/bin/env ruby -wKU
+	<string>#!/usr/bin/env rvm-auto-ruby
 
 require ENV['TM_SUPPORT_PATH'] + '/lib/exit_codes'
 
 # Test Cases
-# 
+#
 # AFooBar -&gt; a_foo_bar -&gt; aFooBar -&gt; AFooBar
 # URLString -&gt; url_string -&gt; urlString -&gt; UrlString
 # TestURLString -&gt; test_url_string -&gt; testUrlString -&gt; TestUrlString
@@ -45,7 +45,7 @@ if is_pascal then
 elsif is_snake then
 	print snakecase_to_camelcase(word)
 else
-	print camelcase_to_pascalcase(word) 
+	print camelcase_to_pascalcase(word)
 end
 </string>
 	<key>fallbackInput</key>

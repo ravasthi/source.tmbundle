@@ -9,16 +9,16 @@
 
 # by James Edward Gray II &lt;james (at) grayproductions.net&gt;
 
-# 
+#
 # To override the operation of this commond for your language add a Preferences
 # bundle item that defines the following valiables as appropriate for your
 # language:
-# 
+#
 #   TM_COMMENT_START - the character string that starts comments, e.g. /*
 #   TM_COMMENT_END   - the character string that ends comments (if appropriate),
 #                      e.g. */
 #   TM_COMMENT_MODE  - the type of comment to use - either 'line' or 'block'
-# 
+#
 
 require "#{ENV["TM_SUPPORT_PATH"]}/lib/escape"
 
@@ -59,16 +59,16 @@ var_suffixes.each do |suffix|
           :end       =&gt; ENV["TM_COMMENT_END#{suffix}"]   || "",
           :mode      =&gt; ENV["TM_COMMENT_MODE#{suffix}"]  ||
                         (ENV["TM_COMMENT_END#{suffix}"] ? "block" : "line"),
-          :no_indent =&gt; ENV["TM_COMMENT_DISABLE_INDENT#{suffix}"] }
-  
+          :no_indent =&gt; (ENV["TM_COMMENT_DISABLE_INDENT#{suffix}"] || "").downcase == "yes" }
+
   com[:esc_start], com[:esc_end] = [com[:start], com[:end]].map do |str|
     str.gsub(/[\\|()\[\].?*+{}^$]/, '\\\\\&amp;').
         gsub(/\A\s+|\s+\z/, '(?:\&amp;)?')
   end
-  
+
   # save the first one as our insertion default
   default = com if default.nil?
-  
+
   # try a removal
   case com[:mode]
   when "line"  # line by line comment
