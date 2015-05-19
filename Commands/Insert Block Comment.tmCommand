@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/usr/bin/env ruby18 -wKU
+	<string>#!/usr/bin/env rvm-auto-ruby -wKU
 require ENV['TM_SUPPORT_PATH'] + '/lib/escape.rb'
 require ENV['TM_SUPPORT_PATH'] + '/lib/exit_codes.rb'
 
@@ -32,13 +32,21 @@ STDOUT &lt;&lt; e_sn(start) &lt;&lt; (input.empty? ? "\n\t$0\n" : e_sn(input)) &
 	<string>none</string>
 	<key>input</key>
 	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>~@/</string>
 	<key>name</key>
 	<string>Insert Block Comment</string>
-	<key>output</key>
-	<string>insertAsSnippet</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>snippet</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
 	<key>uuid</key>
 	<string>83560C23-63E2-4920-8E26-7EAC5FE86B2F</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
