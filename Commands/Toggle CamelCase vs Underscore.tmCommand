@@ -5,9 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/usr/bin/env ruby
-
-require ENV['TM_SUPPORT_PATH'] + '/lib/exit_codes'
+	<string>#!/usr/bin/env ruby20
 
 # Test Cases
 #
@@ -33,19 +31,21 @@ def camelcase_to_pascalcase(word)
 	word.gsub(/^\w{1}/) {|c| c.upcase}
 end
 
-word = $stdin.gets
+def toggle_case(word)
+  case word
+  when /^([^A-Za-z]*+)(?=[A-Z])/
+    $1 + pascalcase_to_snakecase($')
+  when /^([^A-Za-z]*+)(?=.+_)/
+    $1 + snakecase_to_camelcase($')
+  when /^([^A-Za-z]*+)(?=[a-z])/
+    $1 + camelcase_to_pascalcase($')
+  else
+    word
+  end
+end
 
-TextMate.exit_discard if word.nil?
-
-is_pascal = word.match(/^[A-Z]{1}/) ? true : false
-is_snake = word.match(/_/) ? true : false
-
-if is_pascal then
-	print pascalcase_to_snakecase(word)
-elsif is_snake then
-	print snakecase_to_camelcase(word)
-else
-	print camelcase_to_pascalcase(word)
+while word = $stdin.gets
+  print toggle_case(word)
 end
 </string>
 	<key>fallbackInput</key>
